@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hubert Kuzdak — Senior Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0a12;--surface:#12121f;--surface2:#1a1a2e;
+--accent:#e94560;--accent2:#4da6ff;--text:#e0e0e8;
+--muted:#8888a0;--border:#2a2a3e;
+}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;line-height:1.7;min-height:100vh;font-size:1.15rem}
+.container{max-width:1100px;margin:0 auto;padding:56px 40px 80px}
+header{margin-bottom:48px;position:relative}
+header::before{content:'';position:absolute;top:-20px;left:-40px;width:120px;height:120px;background:var(--accent);opacity:.06;border-radius:50%;filter:blur(40px)}
+.name{font-family:'Space Mono',monospace;font-size:3.6rem;font-weight:700;color:#fff;letter-spacing:-1px;margin-bottom:6px}
+.title{font-size:1.35rem;color:var(--accent);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.contact{display:flex;flex-wrap:wrap;gap:16px;font-size:1rem;color:var(--muted)}
+.contact span{display:flex;align-items:center;gap:6px}
+.contact span::before{content:'›';color:var(--accent);font-weight:700}
+.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tag{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:6px 14px;font-size:.88rem;color:var(--accent2);font-family:'Space Mono',monospace;letter-spacing:.5px}
+.tag.highlight{background:var(--accent);border-color:var(--accent);color:#fff}
+section{margin-bottom:44px}
+h2{font-family:'Space Mono',monospace;font-size:1.2rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+h2::after{content:'';flex:1;height:1px;background:var(--border)}
+.summary{font-size:1.12rem;color:var(--muted);line-height:1.75;max-width:960px;border-left:2px solid var(--accent);padding-left:22px;margin-bottom:8px}
+.job{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-bottom:18px;position:relative;transition:border-color .3s}
+.job:hover{border-color:var(--accent)}
+.job-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.job-title{font-size:1.3rem;font-weight:600;color:#fff}
+.job-company{font-size:1.12rem;color:var(--accent);font-weight:500}
+.job-meta{font-size:1rem;color:var(--muted);font-family:'Space Mono',monospace}
+.job ul{list-style:none;padding:0}
+.job li{position:relative;padding-left:20px;margin-bottom:10px;font-size:1.08rem;color:var(--muted);line-height:1.65}
+.job li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:.8rem;top:4px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.skill-group{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px}
+.skill-group h3{font-size:.88rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:8px;font-family:'Space Mono',monospace}
+.skill-group p{font-size:.95rem;color:var(--muted);line-height:1.5}
+.project{display:flex;gap:16px;margin-bottom:16px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+.project-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:8px;flex-shrink:0}
+.project-name{font-weight:600;color:#fff;font-size:1.02rem}
+.project-desc{font-size:.92rem;color:var(--muted);margin-top:2px}
+.gaming-box{background:linear-gradient(135deg,var(--surface) 0%,rgba(233,69,96,.08) 100%);border:1px solid var(--accent);border-radius:12px;padding:28px 32px}
+.gaming-box p{font-size:1rem;color:var(--muted);line-height:1.7}
+.gaming-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.badge{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:.86rem;color:var(--text);font-family:'Space Mono',monospace}
+@media(max-width:600px){
+.name{font-size:2rem}.contact{flex-direction:column;gap:8px}.job-header{flex-direction:column}.skills-grid{grid-template-columns:1fr}
+}
+@media print{
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="name">Hubert Kuzdak</div>
+<div class="title">Senior Software Engineer</div>
+<div class="contact">
+<span><a href="mailto:hubert.kuzdak@gmail.com" style="color:inherit;text-decoration:none">hubert.kuzdak@gmail.com</a></span>
+</div>
+<div class="tag-row">
+<span class="tag">TypeScript</span>
+<span class="tag">React</span>
+<span class="tag">Node.js</span>
+<span class="tag">NestJS</span>
+<span class="tag">GraphQL</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">AWS</span>
+<span class="tag">Redux</span>
+<span class="tag">Docker</span>
+<span class="tag">Electron</span>
+<span class="tag">React Native</span>
+<span class="tag highlight">10+ years</span>
+</div>
+</header>
+
+<section>
+<h2>Summary</h2>
+<p class="summary">Senior Software Engineer and Technical Lead with 10+ years building high-traffic web and mobile applications at scale. Proven track record delivering products serving millions of daily active users, with extensive experience collaborating with US-based teams across timezones. Deep expertise in React, React Native, TypeScript, Node.js, NestJS, GraphQL, and AWS. Background includes work with desktop applications, third-party SDK integrations, and cross-platform performance tuning. Competitive gamer and souls-like enjoyer — active across League of Legends, Elden Ring, Escape from Tarkov, and other major titles.</p>
+</section>
+
+<section>
+<h2>Experience</h2>
+
+<div class="job">
+<div class="job-header">
+<div><div class="job-title">Senior Software Engineer</div><div class="job-company">Bayer</div></div>
+<div class="job-meta">Jun 2025 — Present · Remote</div>
+</div>
+<ul>
+<li>Delivering full-stack features across React/TypeScript frontend and Node.js/NestJS backend for enterprise-grade applications.</li>
+<li>Building and maintaining scalable AWS infrastructure including Lambda functions, API Gateway, and CDK-managed resources with PostgreSQL and Docker.</li>
+<li>Owning features end-to-end from technical design through implementation, testing, and production deployment.</li>
+<li>Collaborating closely with US-based product and design teams across timezones to translate requirements into performant, maintainable solutions.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-header">
+<div><div class="job-title">Technical Lead</div><div class="job-company">Bayer</div></div>
+<div class="job-meta">Aug 2022 — Jun 2025 · Remote</div>
+</div>
+<ul>
+<li>Led cross-functional team of frontend, backend, and mobile developers delivering enterprise applications with GraphQL APIs and AWS infrastructure.</li>
+<li>Architected scalable systems using Node.js/NestJS, React with Redux, and TypeScript with focus on performance optimization and maintainability.</li>
+<li>Designed CI/CD pipelines with Docker-based workflows, automated testing strategies (unit, integration, E2E), and enforced coding standards across the team.</li>
+<li>Integrated third-party analytics and advertising SDKs into web and Electron desktop applications.</li>
+<li>Mentored engineers on technical skills, architectural patterns, and career development.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-header">
+<div><div class="job-title">Full Stack Software Engineer</div><div class="job-company">Reckitt Benckiser</div></div>
+<div class="job-meta">Mar 2020 — Jul 2022 · Remote</div>
+</div>
+<ul>
+<li>Developed and maintained a high-traffic e-commerce platform serving millions of daily active users, built on AWS with React/Redux, Node.js, and PostgreSQL.</li>
+<li>Worked as part of a distributed US-based team across timezones, owning features from design through deployment.</li>
+<li>Built and optimized GraphQL APIs handling complex product data queries at scale with caching strategies.</li>
+<li>Implemented real-time data processing pipelines for analytics and user behavior tracking.</li>
+<li>Worked on multi-platform builds including Electron desktop app with performance profiling and memory optimization.</li>
+<li>Integrated third-party analytics, authentication, and ad tech systems.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-header">
+<div><div class="job-title">Full Stack JavaScript Developer</div><div class="job-company">Software House</div></div>
+<div class="job-meta">Sep 2018 — Feb 2020 · Łódź</div>
+</div>
+<ul>
+<li>Built commercial web and mobile apps using React, React Native, Next.js, and Angular with TypeScript.</li>
+<li>Developed cross-platform TV application across 5 platforms (Web, Android, iOS, Tizen, Apple TV).</li>
+<li>Created backend services with Node.js, NestJS, PostgreSQL, and Firebase with real-time sync.</li>
+<li>Implemented comprehensive testing with Jest, TestCafe, React Testing Library, Enzyme, and Detox.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-header">
+<div><div class="job-title">JavaScript Developer</div><div class="job-company">Various Companies</div></div>
+<div class="job-meta">Jul 2015 — Jun 2018 · Łódź</div>
+</div>
+<ul>
+<li>Developed complex mobile apps for booking platforms using Ionic, Cordova, Angular, and React.</li>
+<li>Built CRM systems, banking applications, and customer platforms with PHP (Symfony, Laravel).</li>
+<li>Delivered CMS-driven website for a professional football club with dynamic content and match center.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Technologies</h2>
+<div class="skills-grid">
+<div class="skill-group"><h3>Frontend</h3><p>React, Next.js, TypeScript, JavaScript, Tailwind, Redux, Zustand, Vue.js, Angular</p></div>
+<div class="skill-group"><h3>React Ecosystem</h3><p>TanStack Query, TanStack Router, React Hook Form, Zod, Storybook</p></div>
+<div class="skill-group"><h3>Backend</h3><p>Node.js, NestJS, GraphQL, REST, PostgreSQL, Firebase, Express</p></div>
+<div class="skill-group"><h3>Infrastructure</h3><p>AWS (Lambda, CDK, API GW), CI/CD, Docker, GitHub Actions, Nx/Turborepo</p></div>
+<div class="skill-group"><h3>Desktop & Mobile</h3><p>Electron, React Native, Multi-platform builds, Performance profiling</p></div>
+<div class="skill-group"><h3>Styling</h3><p>Tailwind, Styled Components, Emotion, CSS Modules, SASS/SCSS</p></div>
+<div class="skill-group"><h3>Testing</h3><p>Jest, React Testing Library, Enzyme, Detox, TestCafe, E2E</p></div>
+<div class="skill-group"><h3>Integration</h3><p>Analytics SDKs, Authentication systems, Third-party APIs, Ad Tech</p></div>
+</div>
+</section>
+
+<section>
+<h2>Key Projects</h2>
+<div class="project"><div class="project-dot"></div><div><div class="project-name">E-Commerce Platform at Scale</div><div class="project-desc">Global platform handling millions of daily users. AWS microservices, real-time analytics, performance optimization.</div></div></div>
+<div class="project"><div class="project-dot"></div><div><div class="project-name">Cross-Platform Streaming App</div><div class="project-desc">TV application across 5 platforms with VOD, live streaming, and multi-platform build tooling.</div></div></div>
+<div class="project"><div class="project-dot"></div><div><div class="project-name">Enterprise Data Processing</div><div class="project-desc">Mass data processing system with complex business logic and high-throughput pipelines.</div></div></div>
+<div class="project"><div class="project-dot"></div><div><div class="project-name">Home Security IoT Platform</div><div class="project-desc">Real-time backend, Bluetooth integration, push notifications, and security event handling.</div></div></div>
+</section>
+
+<section>
+<h2>Why U.GG</h2>
+<div class="gaming-box">
+<p>Gaming has been a constant in my life — from grinding ranked in League of Legends and TFT to beating Radahn hitless in Elden Ring to losing gear in Tarkov raids. I've always been the person in the group who digs into stats, builds, and meta shifts. I use U.GG regularly before queuing up, and I've been working on a player stats tracker as a side project — the kind of thing that comes naturally when you're both a gamer and an engineer. Working at a company like U.GG, where I'd get to combine that with what I actually do for a living, is the kind of opportunity I've been waiting for. I know what makes a player tool genuinely useful versus just flashy, because I'm the target user. Building products for a community I'm already part of is something I'd absolutely love to do.</p>
+<div class="gaming-badges">
+<span class="badge">League of Legends</span>
+<span class="badge">TFT</span>
+<span class="badge">Elden Ring</span>
+<span class="badge">Escape from Tarkov</span>
+</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>
